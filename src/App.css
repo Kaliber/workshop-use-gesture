@@ -5,8 +5,21 @@
   & > .sticker {
     position: absolute;
     left: calc(var(--x) * 100vw - var(--x) * 200px);
-    top: calc(var(--y) * 100vh - var(--x) * 200px);
+    top: calc(var(--y) * 100vh - var(--y) * 200px);
     width: 200px;
     height: auto;
+    cursor: grab;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 0s;
+  }
+
+  & > .active {
+    cursor: grabbing;
+    border-radius: 100px;
+    width: 300px;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 0s;
   }
 }
